@@ -1,8 +1,7 @@
-package by.data.entity;
+package by.domain.entity;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
 
 import by.data.entity.commonfilter.CarManufacture;
 import by.data.entity.commonfilter.CarModel;
@@ -11,55 +10,27 @@ import by.data.entity.commonfilter.Description;
 import by.data.entity.commonfilter.Location;
 import by.data.entity.commonfilter.ParentCategory;
 import by.data.entity.commonfilter.Price;
-import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by Home911 on 26.09.2017.
+ * Created by Home911 on 28.09.2017.
  */
 
-public class ProfileData extends RealmObject {
+public class ProfileDomain {
 
-    @PrimaryKey
-    @SerializedName("id")
-    @Expose
     private String id;
-    @SerializedName("image")
-    @Expose
     private String image;
-    @SerializedName("slug")
-    @Expose
     private String slug;
-    @SerializedName("location")
-    @Expose
     private Location location;
-    @SerializedName("auction")
-    @Expose
     private Boolean auction;
-    @SerializedName("createdAt")
-    @Expose
     private String createdAt;
-    @SerializedName("description")
-    @Expose
     private Description description;
-    @SerializedName("price")
-    @Expose
     private Price price;
-    @SerializedName("car_comp_count")
-    @Expose
     private Integer carCompCount;
-    @SerializedName("parent_category")
-    @Expose
     private ParentCategory parentCategory;
-    @SerializedName("category")
-    @Expose
     private Category category;
-    @SerializedName("car_manufacture")
-    @Expose
     private CarManufacture carManufacture;
-    @SerializedName("car_model")
-    @Expose
     private CarModel carModel;
+
 
     public String getId() {
         return id;

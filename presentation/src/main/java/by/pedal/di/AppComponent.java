@@ -2,7 +2,8 @@ package by.pedal.di;
 
 import javax.inject.Singleton;
 
-import by.pedal.MainActivity;
+import by.pedal.activity.MainActivity;
+import by.pedal.details.ProfileActivity;
 import dagger.Component;
 
 /**
@@ -14,4 +15,5 @@ import dagger.Component;
 @Singleton
 public interface AppComponent {
     public void inject(MainActivity mainActivity);
+    public void inject(ProfileActivity profileActivity);
 }
